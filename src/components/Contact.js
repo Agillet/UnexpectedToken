@@ -37,11 +37,11 @@ function Contact() {
           }
         </div>
       </div>
-      <div className="contact-item">
+      <div className="contact-item social">
         <AnimatedIcon link="https://github.com/agillet" title="Github">
           <Github />
         </AnimatedIcon>
-        <AnimatedIcon title="LinkedIn" link="www.linkedin.com/in/antoinegilletdev">
+        <AnimatedIcon title="LinkedIn" link="https://www.linkedin.com/in/antoinegilletdev">
           <Linkedin />
         </AnimatedIcon>
         <AnimatedIcon title="Twitter" link="https://twitter.com/Agilleeeeet">

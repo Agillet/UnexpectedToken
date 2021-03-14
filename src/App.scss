@@ -14,6 +14,9 @@ html {
   font-family: "Open Sans", sans-serif;
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
   -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
+  @media screen and (max-width: 768px) {
+    background: #1b2735;
+  }
 }
 
 body {
@@ -180,7 +183,7 @@ body {
 
 #top-nav-container {
   height: 3em;
-  background-color: #444d58;
+  background-color: #659999;
   box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
   -webkit-box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
   -moz-box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
@@ -196,6 +199,17 @@ body {
       text-decoration: none;
       font-weight: 600;
       padding: 0 1.5em;
+      position: relative;
+      &.active::after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: #f4791f;
+        position: absolute;
+        border-radius: 50%;
+        top: 100%;
+        left: calc(50% - 4px);
+      }
     }
   }
 }
@@ -211,6 +225,10 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+  }
+  &.social {
+    width: 100%;
+    justify-content: space-evenly;
   }
 }
 
@@ -235,6 +253,6 @@ body {
     width: 2em;
     height: 2em;
     fill: url(#my-cool-gradient) #659999;
-    margin-right: 1em;
+    margin-right: 0;
   }
 }
