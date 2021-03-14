@@ -8,9 +8,9 @@ function Letter({ letter, index, delay = 0, extraClass = "" }) {
   const props = useSpring({
     transform:
       visible ?
-        hover ? 'scaleX(1.5)' : 'scale(1)'
-        : 'scale(0)',
-    from: { transform: 'scale(0)' },
+        hover ? 'translateZ(0) scaleX(1.5)' : 'translateZ(0) scale(1.0)'
+        : 'translateZ(0) scale(0)',
+    from: { transform: 'translateZ(0) scale(0)' },
     config: { ...config.wobbly },
   });
 
