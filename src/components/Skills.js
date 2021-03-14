@@ -25,6 +25,8 @@ function Skills() {
         initial: [0.3, -0.1],
         depth: 1.1,
         weight: true,
+        weightSize: 1.4,
+        outlineThickness: 4,
       });
     } catch (e) {
       // something went wrong, hide the canvas container
@@ -48,6 +50,18 @@ function Skills() {
             Indépendance et attention aux détails me caracterisent tant professionellement que personnellement.
             Je suis intérréssé par tout ce qui touche au developpement front, pour travailler sur des projets ambitieux et dans un esprit positif.
         </p>
+          <div className="link-resume">
+            <p>Vous voulez en savoir plus?</p>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              title="mon CV"
+              href="https://drive.google.com/file/d/12UXKFRFQrQpujGKY2NI8Lfaeh_wD1iQr/view?usp=sharing"
+            >
+              Jetez un oeil à mon CV !
+            </a>
+
+          </div>
         </article>
         <div className="canvas-wrapper">
           <canvas width="500" height="500" id="myCanvas">
@@ -77,7 +91,7 @@ function Skills() {
           </canvas>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

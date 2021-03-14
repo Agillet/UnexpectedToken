@@ -14,8 +14,8 @@ html {
   font-family: "Open Sans", sans-serif;
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
   -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
-  @media screen and (max-width: 768px) {
-    background: #1b2735;
+  @media screen and (max-width: 380px) {
+    background: #10161e;
   }
 }
 
@@ -127,18 +127,31 @@ body {
     white-space: nowrap;
   }
   .about-me {
-    width: 33%;
+    width: 50%;
     color: rgba(#fff, 0.87);
   }
   .canvas-wrapper {
     display: flex;
     justify-content: center;
-    width: 66%;
+    width: 50%;
     a {
       font-weight: 900;
+      font-size: 1.5em;
     }
     canvas {
       // width: 100%;
+    }
+  }
+  .link-resume {
+    margin-top: 1em;
+    a {
+      font-size: 1.3em;
+      display: inline-block;
+      background: -webkit-linear-gradient(#659999, #f4791f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      border-bottom: 1px solid #f4791f;
     }
   }
   @media screen and (max-width: 768px) {
