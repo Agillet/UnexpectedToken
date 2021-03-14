@@ -18,7 +18,7 @@ function AnimatedIcon({ children, link, title }) {
 
 
   return (
-    <animated.a title={title} href={link} style={{ ...animation }} onMouseEnter={() => { setHover(true); }}>
+    <animated.a target="_blank" title={title} href={link} style={{ ...animation }} onMouseEnter={() => { setHover(true); }}>
       {children}
     </animated.a>
   )

@@ -41,10 +41,10 @@ function Contact() {
         <AnimatedIcon link="https://github.com/agillet" title="Github">
           <Github />
         </AnimatedIcon>
-        <AnimatedIcon title="LinkedIn" href="www.linkedin.com/in/antoinegilletdev">
+        <AnimatedIcon title="LinkedIn" link="www.linkedin.com/in/antoinegilletdev">
           <Linkedin />
         </AnimatedIcon>
-        <AnimatedIcon title="Twitter" href="https://twitter.com/Agilleeeeet">
+        <AnimatedIcon title="Twitter" link="https://twitter.com/Agilleeeeet">
           <Twitter />
         </AnimatedIcon>
       </div>
