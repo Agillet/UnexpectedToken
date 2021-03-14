@@ -38,7 +38,7 @@ function Skills() {
           <h2 className="title">
             <div className="title-line">
               {
-                [...title].map((letter) => <Letter letter={letter} />)
+                [...title].map((letter) => <Letter letter={letter} delay={1000} />)
               }
             </div>
           </h2>

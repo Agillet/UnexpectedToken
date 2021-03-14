@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -19,22 +20,30 @@ body {
 }
 
 .App {
-  height: 100vh;
+  height: calc(100vh - 4em);
 }
 
 .page {
   padding: 7em;
-  height: calc(100vh - 2em);
+  height: calc(100vh - 4em);
   &.home {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  p {
+    font-size: 1.3em;
+  }
   @media screen and (max-width: 1100px) {
     padding: 5em;
+    height: auto;
   }
   @media screen and (max-width: 768px) {
     padding: 2em;
+    p {
+      font-size: 1em;
+    }
   }
   @media screen and (max-width: 380px) {
     padding: 1em;
@@ -113,9 +122,6 @@ body {
   .about-me {
     width: 33%;
     color: rgba(#fff, 0.87);
-    p {
-      font-size: 1.3em;
-    }
   }
   .canvas-wrapper {
     display: flex;
@@ -136,8 +142,8 @@ body {
       .title {
         text-align: center;
       }
-      p {
-        font-size: 1em;
+      canvas {
+        width: 100%;
       }
     }
   }
@@ -162,25 +168,68 @@ body {
     height: 5em;
   }
   @media screen and (max-width: 768px) {
-    top: 8em;
+    top: 4em;
     width: 3em;
     height: 3em;
   }
 }
 
 #top-nav-container {
+  height: 3em;
+  background-color: #444d58;
+  box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
   .top-nav {
-    min-height: 2em;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     justify-content: center;
-    gap: 3em;
     margin: 0 auto;
     a {
       color: rgba(#fff, 0.87);
       text-decoration: none;
       font-weight: 600;
+      padding: 0 1.5em;
     }
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  font-size: 2em;
+  background: -webkit-linear-gradient(#659999, #f4791f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  a {
+    text-decoration: none;
+  }
+}
+
+.page-contact {
+  // @media screen and (max-width: 768px) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // }
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  // font-size: 1em;
+  margin-right: 0.5em;
+  fill: url(#icon-contact-gradient) #659999;
+  &-social {
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    fill: url(#my-cool-gradient) #659999;
+    margin-right: 1em;
   }
 }

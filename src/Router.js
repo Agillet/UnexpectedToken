@@ -1,6 +1,7 @@
 import { PageTransition } from '@steveeeie/react-page-transition';
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Route, Switch, useHistory, } from 'react-router';
+import Contact from './components/Contact';
 import Home from './components/Home';
 import NavArrows from './components/icons/NavArrows';
 import Skills from './components/Skills';
@@ -12,7 +13,8 @@ function Router() {
 
   const pages = useMemo(() => [
     '/',
-    '/skills',
+    '/about-me',
+    '/contact',
   ], []);
 
 
@@ -40,10 +42,10 @@ function Router() {
 
   return (
     <div className="App">
-      <NavArrows
+      {/* <NavArrows
         onPrevious={onPrevious}
         onNext={onNext}
-      />
+      /> */}
       <Route
         render={({ location }) => {
           return (
@@ -53,7 +55,8 @@ function Router() {
             >
               <Switch location={location}>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/skills" component={Skills} />
+                <Route exact path="/about-me" component={Skills} />
+                <Route exact path="/contact" component={Contact} />
               </Switch>
             </PageTransition>
           );

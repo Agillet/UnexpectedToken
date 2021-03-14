@@ -6,7 +6,8 @@ function Nav() {
     <nav id="top-nav-container">
       <div className="top-nav">
         <NavLink exact to="/">Home</NavLink>
-        <NavLink exact to="/skills">à propos de moi</NavLink>
+        <NavLink exact to="/about-me">À propos</NavLink>
+        <NavLink exact to="/contact">Contact</NavLink>
       </div>
     </nav>
   )
