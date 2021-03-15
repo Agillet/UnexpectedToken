@@ -56,7 +56,7 @@ function Skills() {
               rel="noreferrer"
               target="_blank"
               title="mon CV"
-              href="https://drive.google.com/file/d/12UXKFRFQrQpujGKY2NI8Lfaeh_wD1iQr/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GarR6ueu6Ogck5HQWMjwL5NWMXippQWA/view?usp=sharing"
             >
               Jetez un oeil à mon CV !
             </a>
