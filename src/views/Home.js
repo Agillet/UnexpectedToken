@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Letter from './Letter'
+import Letter from '../components/Letter'
 function Home() {
   const line1 = "Salut, ";
   const line2 = "moi c'est "

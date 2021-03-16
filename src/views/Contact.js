@@ -1,11 +1,11 @@
 import React from 'react'
-import AnimatedIcon from './AnimatedIcon'
-import Envelope from './icons/Envelope'
-import Github from './icons/Github'
-import Linkedin from './icons/Linkedin'
-import Phone from './icons/Phone'
-import Twitter from './icons/Twitter'
-import Letter from './Letter'
+import AnimatedIcon from '../components/icons/AnimatedIcon'
+import Envelope from '../components/icons/Envelope'
+import Github from '../components/icons/Github'
+import Linkedin from '../components/icons/Linkedin'
+import Phone from '../components/icons/Phone'
+import Twitter from '../components/icons/Twitter'
+import Letter from '../components/Letter'
 
 function Contact() {
   const title = "Prenons contact !"

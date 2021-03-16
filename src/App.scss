@@ -8,29 +8,30 @@
 
 html {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
+  background: #10161e;
+  overflow-x: hidden;
   min-width: 320px;
   font-family: "Open Sans", sans-serif;
   -moz-osx-font-smoothing: grayscale; /*(For Firefox)*/
   -webkit-font-smoothing: antialiased; /*(For Chrome and Safari)*/
-  @media screen and (max-width: 380px) {
-    background: #10161e;
-  }
+}
+
+#root {
+  height: 100%;
 }
 
 body {
   font-size: 1em;
+  height: 100%;
   line-height: 1.6;
 }
 
 .App {
-  height: calc(100vh - 4em);
+  height: 100vh;
 }
 
 .page {
-  padding: 7em;
-  height: calc(100vh - 4em);
+  padding: 3em 7em;
   &.home {
     height: 100%;
     display: flex;
@@ -41,17 +42,17 @@ body {
     font-size: 1.3em;
   }
   @media screen and (max-width: 1100px) {
-    padding: 5em;
+    padding: 3em 5em;
     height: auto;
   }
   @media screen and (max-width: 768px) {
-    padding: 2em;
+    padding: 3em 2em;
     p {
       font-size: 1em;
     }
   }
   @media screen and (max-width: 380px) {
-    padding: 1em;
+    padding: 3em 1em;
   }
 }
 
@@ -93,7 +94,7 @@ body {
     }
   }
   @media screen and (max-width: 380px) {
-    font-size: 1.5em;
+    font-size: 1.4em;
     text-align: center;
     .title-line {
       min-height: 20px;
@@ -117,9 +118,13 @@ body {
   }
 }
 
+// .skills-wrapper,
+// .tools-wrapper {
+//   height: 100vh;
+// }
+
 .skills-wrapper {
   display: flex;
-  height: 100%;
   justify-content: center;
   align-items: center;
   .title {
@@ -129,6 +134,16 @@ body {
   .about-me {
     width: 50%;
     color: rgba(#fff, 0.87);
+    .about-me-text {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      &.visible {
+        opacity: 1;
+      }
+    }
+  }
+  .highlight {
+    font-weight: 600;
   }
   .canvas-wrapper {
     display: flex;
@@ -169,32 +184,9 @@ body {
   }
 }
 
-.arrow-wrapper {
-  position: absolute;
-  cursor: pointer;
-  width: 7em;
-  height: 7em;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  .arrow {
-    fill: url(#my-cool-gradient) #447799;
-  }
-  &.next {
-    right: 0;
-  }
-  @media screen and (max-width: 1100px) {
-    width: 5em;
-    height: 5em;
-  }
-  @media screen and (max-width: 768px) {
-    top: 4em;
-    width: 3em;
-    height: 3em;
-  }
-}
-
 #top-nav-container {
+  position: fixed;
+  width: 100%;
   height: 3em;
   background-color: #659999;
   box-shadow: 0px 3px 5px 0px rgba(68, 77, 88, 0.75);
@@ -267,5 +259,45 @@ body {
     height: 2em;
     fill: url(#my-cool-gradient) #659999;
     margin-right: 0;
+  }
+}
+
+.tools-wrapper {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin-top: 3em;
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  &-icon {
+    margin-right: 1em;
+  }
+  &-title {
+    font-size: 2em;
+    color: rgba(#fff, 0.87);
+  }
+  &-container {
+    height: 3px;
+    width: 100%;
+    background-color: #e0e0de;
+    border-radius: 50px;
+    margin: 1em 0 3em;
+  }
+  &-filler {
+    height: 100%;
+    border-radius: inherit;
+    text-align: right;
+    transition: width 1s ease-out, transform 0.2s linear;
+    &:hover {
+      transform: scaleY(2);
+    }
+  }
+  &-label {
+    padding: 5px;
+    color: white;
+    font-weight: bold;
   }
 }
