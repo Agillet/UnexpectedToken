@@ -4,12 +4,12 @@ import Letter from '../components/Letter'
 import ProgressBar from '../components/ProgressBar'
 import useOnScreen from '../hooks/useOnScreen';
 
-function ToolsAndSkills({ title }) {
+function ToolsAndSkills() {
   const wrapperRef = useRef(null);
-  const isVisible = useOnScreen(wrapperRef);
+  const title = "outils & compétences";
 
   return (
-    <div ref={wrapperRef} className={`tools-wrapper ${isVisible ? 'visible' : ''}`}>
+    <div ref={wrapperRef} className="tools-wrapper">
       <h2 className="title">
         <div className="title-line">
           {
@@ -23,7 +23,6 @@ function ToolsAndSkills({ title }) {
         icon={faHtml5}
         completed={75}
         index={1}
-        isVisible={isVisible}
       />
       <ProgressBar
         bgcolor="#264DE4"
@@ -31,7 +30,6 @@ function ToolsAndSkills({ title }) {
         icon={faCss3}
         completed={75}
         index={2}
-        isVisible={isVisible}
       />
       <ProgressBar
         bgcolor="#ccbd49"
@@ -39,7 +37,6 @@ function ToolsAndSkills({ title }) {
         icon={faJs}
         completed={80}
         index={3}
-        isVisible={isVisible}
       />
       <ProgressBar
         bgcolor="#19c6e6"
@@ -47,7 +44,6 @@ function ToolsAndSkills({ title }) {
         icon={faReact}
         completed={80}
         index={4}
-        isVisible={isVisible}
       />
       <ProgressBar
         bgcolor="#D6002F"
@@ -55,7 +51,6 @@ function ToolsAndSkills({ title }) {
         icon={faAngular}
         completed={50}
         index={5}
-        isVisible={isVisible}
       />
       <ProgressBar
         bgcolor="#19c6e6"
@@ -63,7 +58,6 @@ function ToolsAndSkills({ title }) {
         icon={faReact}
         completed={70}
         index={6}
-        isVisible={isVisible}
       />
     </div>
   )

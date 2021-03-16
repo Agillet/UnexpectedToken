@@ -1,16 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react'
 
-const ProgressBar = ({ bgcolor, completed, title, index, icon, isVisible }) => {
+const ProgressBar = ({ bgcolor, completed, title, index, icon }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    if (isVisible) {
-      setTimeout(() => setProgress(completed), (index * 500) + 500);
-    } else {
-      setProgress(0);
-    }
-  }, [completed, index, isVisible]);
+    setTimeout(() => setProgress(completed), (index * 500) + 500);
+  }, [completed, index]);
 
   return (
     <>

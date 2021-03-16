@@ -7,7 +7,6 @@ import ToolsAndSkills from '../blocks/ToolsAndSkills';
 function About() {
 
   const title = "À propos de moi";
-  const title2 = "outils & compétences";
 
   return (
     <div className="page">
@@ -15,7 +14,6 @@ function About() {
         <AboutMeText title={title} />
         <SkillsCanvas />
       </div>
-      <ToolsAndSkills title={title2} />
     </div>
   )
 }
