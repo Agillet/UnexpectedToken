@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import { faAngular, faCss3, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import Letter from '../components/Letter'
 import ProgressBar from '../components/ProgressBar'
-import useOnScreen from '../hooks/useOnScreen';
 
 function ToolsAndSkills() {
   const wrapperRef = useRef(null);

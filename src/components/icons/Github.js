@@ -1,14 +1,6 @@
-import React, { useState } from 'react'
-import { config, useSpring } from 'react-spring';
+import React from 'react'
 
 function Github() {
-  const [hover, setHover] = useState(false);
-  const animation = useSpring({
-    transform: hover ? 'scaleX(1.5)' : 'scale(1)',
-    from: { transform: 'scale(1)' },
-    config: { ...config.wobbly },
-  });
-
   return (
     <>
       <svg style={{ width: 0, height: 0, position: 'absolute' }} aria-hidden="true" focusable="false">

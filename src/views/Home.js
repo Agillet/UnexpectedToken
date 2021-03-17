@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Letter from '../components/Letter'
 function Home() {
   const line1 = "Salut, ";
